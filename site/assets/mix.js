@@ -185,7 +185,7 @@
         zip.file(`SOUNDS/${lang}/${f}.wav`, bytes);
       }
     }));
-    zip.file('README.txt', `Stickbeats custom mix\n\n${files.map(f => `${f}.wav <- ${personal.has(f) ? 'Personal recording' : D.byId[selected[f]].name}`).join('\n')}\n\nCopy the SOUNDS folder onto the root of your EdgeTX SD card.${v ? ` Set the radio voice language to ${v.language}.` : ''}\nPersonal recordings: no license is assigned by Stickbeats.\nCatalogue theme sounds: CC0 1.0. Any bundled voice retains its original license.\nTheme selections only (personal recordings are not in the link): ${link}\nhttps://over9kfpv.github.io/stickbeats/\n`);
+    zip.file('README.txt', `Stickbeats custom mix\n\n${files.map(f => `${f}.wav <- ${personal.has(f) ? 'Personal recording' : D.byId[selected[f]].name}`).join('\n')}\n\nCopy the SOUNDS folder onto the root of your EdgeTX SD card.${v ? ` Set the radio voice language to ${v.language}.` : ''}\nPersonal recordings: no license is assigned by Stickbeats.\nCatalogue theme sounds: CC0 1.0. Any bundled voice retains its original license.\nTheme selections only (personal recordings are not in the link): ${link}\nhttps://rotordeck.com/stickbeats/\n`);
     return { zip, name: v ? `stickbeats-mix-${v.id}.zip` : 'stickbeats-mix.zip' };
   }
   $('download').onclick = async () => {

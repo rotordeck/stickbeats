@@ -36,7 +36,7 @@ All files are 16 kHz, mono, 16-bit PCM WAV, as EdgeTX expects.
 Made with Stickbeats: every sound is composed as MIDI and rendered by a
 custom chip/FM synth (plus a General MIDI soundfont for some instruments).
 Sounds: CC0 1.0 (public domain). Code: MIT.
-https://over9kfpv.github.io/stickbeats/
+https://rotordeck.com/stickbeats/
 """
 
 

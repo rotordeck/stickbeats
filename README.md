@@ -4,7 +4,7 @@
 
 **Sound themes:** 47 free sound themes for EdgeTX radios. Each one replaces the radio's beeps, warnings and callouts (boot, arm/disarm, low battery, telemetry lost, RF critical, timers, trims, flight modes…) with sounds composed for that theme.
 
-**Site:** https://over9kfpv.github.io/stickbeats/ lets you listen to every sound, compare themes, build your own mix and download ready-to-copy SD card packs.
+**Site:** https://rotordeck.com/stickbeats/ lets you listen to every sound, compare themes, build your own mix and download ready-to-copy SD card packs.
 
 | Category | Themes |
 | --- | --- |
@@ -19,7 +19,7 @@ All music is original, except public-domain tunes (Korobeiniki, Tárrega's Gran 
 
 ## Install a pack
 
-Unzip it and copy its `SOUNDS` folder onto the root of the radio's SD card. Only the 70 event files are replaced; spoken numbers and units stay. See [install](https://over9kfpv.github.io/stickbeats/install.html).
+Unzip it and copy its `SOUNDS` folder onto the root of the radio's SD card. Only the 70 event files are replaced; spoken numbers and units stay. See [install](https://rotordeck.com/stickbeats/install.html).
 
 ## Record your own sounds
 

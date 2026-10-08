@@ -115,7 +115,7 @@ INSTALL
 
 {n} files.
 
-Want game-style alert sounds on top of this voice? https://over9kfpv.github.io/stickbeats/
+Want game-style alert sounds on top of this voice? https://rotordeck.com/stickbeats/
 """
 
 README = """{name} - EdgeTX voice pack ({native})
@@ -131,7 +131,7 @@ INSTALL
 {n} files, 16 kHz mono 16-bit WAV. Numbers, units, alarms and every callout EdgeTX
 knows, plus the Betaflight, iNav and Yaapu script phrases in SOUNDS/{lang}/SCRIPTS.
 
-Want game-style alert sounds on top of this voice? https://over9kfpv.github.io/stickbeats/
+Want game-style alert sounds on top of this voice? https://rotordeck.com/stickbeats/
 """
 
 
@@ -351,7 +351,7 @@ def build_voices(site: Path):
     return data
 
 
-SITE_URL = "https://over9kfpv.github.io/stickbeats/"
+SITE_URL = "https://rotordeck.com/stickbeats/"
 
 
 def write_static_pages(site: Path, data):
