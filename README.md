@@ -86,7 +86,7 @@ uv run build.py --private --masters ~/my-sounds   # ...with your own WAVs layere
 
 `private_themes/` is for packs you keep to yourself, such as recreations of copyrighted game sounds. It is gitignored, never built by CI and never published.
 
-Pushing to `main` runs the tests, builds everything and deploys `site/` to GitHub Pages (`.github/workflows/pages.yml`).
+Pushing to `main` runs the tests and builds everything (`.github/workflows/ci.yml`). The live site is assembled and hosted by [rotordeck/website](https://github.com/rotordeck/website) on rotordeck.com.
 
 ## Adding a theme
 
