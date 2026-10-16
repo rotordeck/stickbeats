@@ -97,6 +97,34 @@ Create `soundgen/themes/<file>.py` with a `Theme` subclass: set `id`, `name`, `c
 - arm differs from disarm, on differs from off
 - critical alerts have at least 3 separate bursts
 
+## Frequently asked questions
+
+### How do I change the sounds on my EdgeTX radio?
+
+Pick a theme on [rotordeck.com/stickbeats](https://rotordeck.com/stickbeats/), download the pack, unzip it and copy its `SOUNDS` folder to the root of the radio's SD card. Only the 70 event sounds change; spoken numbers stay. See [Install a pack](#install-a-pack).
+
+### Can I record my own voice for my radio?
+
+Yes. The Mix page records a replacement for any of the 70 events with your microphone, trims it, and exports a ready-to-copy ZIP. The audio never leaves your device. See [Record your own sounds](#record-your-own-sounds).
+
+### Where can I find EdgeTX voice packs in other languages?
+
+Stickbeats has voice packs in 16 languages, playable phrase by phrase before you download, plus free CC0 voices in Dutch (Flemish and standard), British, Australian and Scottish English.
+
+### Do these sound themes work on RadioMaster, Jumper and other EdgeTX radios?
+
+Yes: they use the standard EdgeTX SD card sound files, so any radio running EdgeTX can use them.
+
+## More free FPV tools from Rotordeck
+
+- [Sticklink](https://rotordeck.com/sticklink/): live stick and telemetry overlays for OBS, straight from an EdgeTX radio
+- [OSD Fonts](https://rotordeck.com/osd-fonts/): 278 retro fonts and a font editor for the Betaflight analog OSD
+- [Betasplash](https://rotordeck.com/betasplash/): make a Betaflight OSD boot logo with your callsign
+- [bf](https://rotordeck.com/bf/): configure Betaflight from the command line, for humans and AI agents
+- [Rotordeck skills](https://github.com/rotordeck/skills): Agent Skills that teach Claude Code and other agents to set up Betaflight
+
+All of them in one place: the [Rotordeck Toy Box](https://rotordeck.com/toybox/).
+
 ## License
 
 Original theme sounds, MIDI and voices made by Stickbeats: CC0. Code: MIT. Third-party EdgeTX voices retain their original licenses. See [LICENSE](LICENSE).
