@@ -86,6 +86,11 @@ VOICES = {
     "da":            ("da-DK", "Danish",             "Dansk",               "🇩🇰", "Christel",  "f", "Azure neural", "da_DK", False, ""),
     "se":            ("sv-SE", "Swedish",            "Svenska",             "🇸🇪", "Sofie",     "f", "Azure neural", "sv-SE", False, ""),
     "ru":            ("ru-RU", "Russian",            "Русский",             "🇷🇺", "Svetlana",  "f", "Azure neural", "ru-RU", False, ""),
+    "ua-yaroslava":  ("uk-UA", "Ukrainian",          "Українська",          "🇺🇦", "Yaroslava", "f", "ElevenLabs", "uk-UA-tts", True, "Warm, clear Ukrainian narrator, numbers spelled out properly. Made for this site."),
+    "ua-mariya":     ("uk-UA", "Ukrainian",          "Українська",          "🇺🇦", "Mariya",    "f", "ElevenLabs", "uk-UA-tts", True, "Bright Ukrainian narrator. Every event phrase, including the 17 the official pack lacks."),
+    "ua_fun-village-witch":  ("uk-UA", "Ukrainian", "Українська", "🇺🇦", "Horpyna the Village Witch", "f", "ElevenLabs", "uk-fun-village-witch",  True, "Folk-tale trickster. Low battery becomes a curse on your house."),
+    "ua_fun-monster-hunter": ("uk-UA", "Ukrainian", "Українська", "🇺🇦", "The Monster Hunter",        "m", "ElevenLabs", "uk-fun-monster-hunter", True, "Grim dark-fantasy hunter. Every flight is a contract."),
+    "ua_fun-overlord":       ("uk-UA", "Ukrainian", "Українська", "🇺🇦", "Hector the Overlord",       "m", "ElevenLabs", "uk-fun-overlord",       True, "Melodramatic villain. Disarming is a defeat he will avenge."),
     "ua-ostap":      ("uk-UA", "Ukrainian",          "Українська",          "🇺🇦", "Ostap",     "m", "Azure neural", "uk-UA", False, ""),
     "ua-polina":     ("uk-UA", "Ukrainian",          "Українська",          "🇺🇦", "Polina",    "f", "Azure neural", "uk-UA", False, ""),
     "jp":            ("ja-JP", "Japanese",           "日本語",               "🇯🇵", "Nanami",    "f", "Azure neural", "ja-JP", False, ""),
@@ -298,7 +303,7 @@ def build_voices(site: Path):
         durs = {rel: None for rel in clips}   # filled after the pool below
         entry = dict(id=d, code=code, lang=code[:2], language=language, native=native, flag=flag, name=name,
                      gender=gender, engine=engine, hosted=hosted, note=note, files=len(wavs),
-                     clips=clips, durs=durs, funny=d.startswith("en_fun-"),
+                     clips=clips, durs=durs, funny="_fun-" in d,
                      texts={rel: texts.get(rel, ("", ""))[0] for rel in clips},
                      previews=[f for f in PREVIEWS if f in clips])
         if hosted:

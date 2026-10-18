@@ -1,6 +1,6 @@
 # Stickbeats: EdgeTX voice packs and sound themes
 
-**Voice packs** in 16 languages, previewable phrase by phrase, plus free CC0 voices made for this project: Dutch (Flemish and standard), British, Australian and Scottish English. The voices live in the [edgetx-sdcard-sounds fork](https://github.com/HansF/edgetx-sdcard-sounds); `voices_build.py` turns that repo into the site's catalogue, previews, hosted zips and one crawlable page per voice (`site/v/<id>.html`). Most official EdgeTX voices are hosted here too (so the mixer can bundle them), except GLaDOS and Joshua Bardwell's recording, which stay linked to the EdgeTX release. Voice packs are stored as 16 kHz FLAC (`site/dl/voice-<id>.flac.zip`) and converted to WAV in the browser by `site/assets/voicepack.js`, which keeps the site under GitHub Pages' 1 GB limit. In CI the voice repo is fetched as a sparse partial clone (`voices_build.py --sparse-patterns`); locally, set `EDGETX_VOICES_SRC` or keep the fork next to this checkout.
+**Voice packs** in 16 languages, previewable phrase by phrase, plus free CC0 voices made for this project: Dutch (Flemish and standard), British, Australian, Scottish and Irish English, Ukrainian (two narrators and three funny characters) and more. The voices live in the [edgetx-sdcard-sounds fork](https://github.com/HansF/edgetx-sdcard-sounds); `voices_build.py` turns that repo into the site's catalogue, previews, hosted zips and one crawlable page per voice (`site/v/<id>.html`). Most official EdgeTX voices are hosted here too (so the mixer can bundle them), except GLaDOS and Joshua Bardwell's recording, which stay linked to the EdgeTX release. Voice packs are stored as 16 kHz FLAC (`site/dl/voice-<id>.flac.zip`) and converted to WAV in the browser by `site/assets/voicepack.js`, which keeps the site under GitHub Pages' 1 GB limit. In CI the voice repo is fetched as a sparse partial clone (`voices_build.py --sparse-patterns`); locally, set `EDGETX_VOICES_SRC` or keep the fork next to this checkout.
 
 **Sound themes:** 47 free sound themes for EdgeTX radios. Each one replaces the radio's beeps, warnings and callouts (boot, arm/disarm, low battery, telemetry lost, RF critical, timers, trims, flight modes…) with sounds composed for that theme.
 
@@ -109,7 +109,7 @@ Yes. The Mix page records a replacement for any of the 70 events with your micro
 
 ### Where can I find EdgeTX voice packs in other languages?
 
-Stickbeats has voice packs in 16 languages, playable phrase by phrase before you download, plus free CC0 voices in Dutch (Flemish and standard), British, Australian and Scottish English.
+Stickbeats has voice packs in 16 languages, playable phrase by phrase before you download, plus free CC0 voices in Dutch (Flemish and standard), English (British, Australian, Scottish, Irish) and Ukrainian, including funny character packs.
 
 ### Do these sound themes work on RadioMaster, Jumper and other EdgeTX radios?
 
