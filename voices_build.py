@@ -393,7 +393,11 @@ def write_static_pages(site: Path, data):
         page = page.replace('<section class="v-hero">', seo + '\n  <section class="v-hero">', 1)
         (site / "v" / f"{v['id']}.html").write_text(page)
         urls.append(f"{SITE_URL}v/{v['id']}.html")
-    urls += [f"{SITE_URL}theme.html?t={t}" for t in sorted(p.stem for p in (site / "dl").glob("*.zip") if not p.stem.endswith("-midi") and not p.stem.startswith("voice-") and p.stem != "all-themes")]
+    # The themes are ONE page (theme.html) filtered by ?t=<id> and canonicalised to it. Listing the query-string
+    # variants in the sitemap promised Google 47 URLs it then correctly refused to index ("Alternate page with
+    # proper canonical tag", Search Console 2026-10-25). The page itself belongs in the sitemap; the variants stay
+    # reachable through the page's own pager and theme list.
+    urls.append(SITE_URL + "theme.html")
     (site / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                       + "".join(f"  <url><loc>{H.escape(u)}</loc></url>\n" for u in urls) + "</urlset>\n")
     (site / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}sitemap.xml\n")
